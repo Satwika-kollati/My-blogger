@@ -19,7 +19,7 @@ const postDetails = ({post})=>{
 
         //fetch adress for delete
         //second arg-object that says the method of request 
-        const response = await fetch('/api/posts/' + post._id ,{
+        const response = await fetch(`${process.env.REACT_APP_URL}/api/posts/` + post._id ,{
             method:'DELETE',
             headers:{
                 'Authorization' : `Bearer ${user.token}`

@@ -30,7 +30,7 @@ const PostForm = () => {
 
         //using the fetch api to send the post request at the required address
         //the second argument is an object with following properties
-        const response = await fetch('/api/posts',{
+        const response = await fetch(`${process.env.REACT_APP_URL}/api/posts`,{
             method:'POST',
             //to send the post into json format
             body: JSON.stringify(post),
